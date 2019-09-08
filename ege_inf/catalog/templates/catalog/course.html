@@ -1,0 +1,32 @@
+{% extends "catalog/base_generic.html" %}
+
+{% block title %}<title>Задачи по курсу</title>{% endblock %}
+
+{% block content %}
+
+
+
+    <section id="main" class="main">
+      <div class="container">
+        <div class="row justify-content-center">
+              <div class="course col-lg-7">
+                <h2>Курс: Подготовка к ЕГЭ</h2>
+
+                  <button id="buttonLesson1" type="button" class="btn btn-secondary btn-lg btn-block" onclick="window.location='lesson1.html'">
+                    <h3>Занятие 1</h3>
+                    <p>Системы счисления. Перевод чисел в десятичную систему счисления.</p>
+                  </button>
+
+
+                 <button id="buttonLesson2" type="button" class="btn btn-secondary btn-lg btn-block" onclick="window.location='lesson2.html'">
+                   <h3>Занятие 2</h3>
+                   <p>Логика. Анализ таблицы истинности.</p>
+                 </button>
+
+              </div>
+
+        </div>
+      </div>
+    </section>
+    
+    {% endblock %}

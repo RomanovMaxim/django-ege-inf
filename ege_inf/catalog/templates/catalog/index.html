@@ -1,21 +1,28 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Список всех задач</h1>
-    {% if latest_task_list %}
-    <ul>
-        {% for task in latest_task_list %}
-            <li><a href="/catalog/{{ task.id }}/">{{ task.task_text }}</a></li><br>
-                {{ task.answer_text }}<br>
-                {{ task.detail_solution_text}}
-        {% endfor %}
-    </ul>
-    {% else %}
-         <p>В базе данных нет заданий.</p>
-    {% endif %}
-  </body>
-</html>
+{% extends "catalog/base_generic.html" %}
+
+{% block title %}<title>Информатика (ЕГЭ)</title>{% endblock %}
+
+{% block content %}
+
+        <div class="row justify-content-center">
+          <div class="d-flex flex-column">
+              <div class="caption col-lg-5">
+                <h2>Прокачай ЕГЭ по информатике</h2>
+              </div>
+
+              <div class="caption col-lg-5">
+                <p>Системная подготовка по всем темам с учетом особенностей клипового мышления</p>
+              </div>
+
+              <div class="mybutton">
+                <input id="buttonExercise" class="btn btn-primary" type="submit" value="Тренироваться!">
+              </div>
+
+              <div class="mybutton">
+                <input id="buttonChooseTask" class="btn btn-primary" type="submit" value="Выбрать задание">
+              </div>
+          </div>
+
+        </div>
+
+{% endblock %}

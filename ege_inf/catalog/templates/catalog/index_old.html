@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Список всех задач</h1>
+    {% if latest_task_list %}
+    <ul>
+        {% for task in latest_task_list %}
+            <li><a href="/catalog/{{ task.id }}/">{{ task.task_text }}</a></li><br>
+                {{ task.answer_text }}<br>
+                {{ task.detail_solution_text}}
+        {% endfor %}
+    </ul>
+    {% else %}
+         <p>В базе данных нет заданий.</p>
+    {% endif %}
+  </body>
+</html>

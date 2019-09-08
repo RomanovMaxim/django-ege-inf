@@ -1,0 +1,118 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.container{
+  //background: yellow;
+}
+
+ul, li{
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.header{
+  background: rgba(207, 213, 234, 0.1);
+  color: #473232;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.logo{
+//  background: rgba(107, 213, 234, 0.5);
+}
+
+.logo p{
+  display: inline;
+  font-size: 14px;
+  font-weight: 500;
+//  color: #473232;
+}
+
+.menu{
+//  background: rgba(207, 213, 234, 0.5);
+}
+
+.menu__item{
+  margin: 0 25px;
+}
+
+.menu__item a{
+  font-size: 18px;
+  font-weight: 500;
+  color: #473232;
+}
+
+.user{
+  font-size: 14px;
+  font-weight: 500;
+  color: #473232;
+}
+
+.main{
+  background: rgba(207, 213, 234, 0.1);
+  align-items: flex-start;
+}
+
+.lessonTheme{
+  font-family: 'Times New Roman';
+  color: #000;
+  padding: 30px;
+}
+
+.number{
+  //background: rgba(207, 213, 234, 0.5);
+  border: 1px solid black;
+  width: 38px;
+  height: 24px;
+  text-align: center;
+  flex: none;
+  margin-right: 20px;
+  padding: 0px;
+  font-family: 'Times New Roman';
+  color: #000;
+}
+
+.course{
+  //background: rgba(107, 213, 234, 0.5);
+  font-family: 'Times New Roman';
+}
+
+.course h2{
+  //background: rgba(107, 213, 234, 0.5);
+  font-family: 'Comfortaa', sans-serif;
+}
+.task{
+  //background: rgba(107, 213, 234, 0.5);
+  flex: 1;
+  padding-bottom: 10px;
+  text-align: justify;
+  font-family: 'Times New Roman';
+  color: #000;
+}
+
+.mybutton{
+  //background: rgba(107, 213, 234, 0.5);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+
+#buttonComplete, #buttonExercise, #buttonChooseTask{
+  background: #F03260;
+  border-radius: 30px;
+  border-width: 0;
+  font-size: 14px;
+}
+
+.footer{
+  height: 150px;
+  background: rgba(207, 213, 234, 0.1);
+}

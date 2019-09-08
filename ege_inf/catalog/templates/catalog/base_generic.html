@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+
+    {% block title %}<title>Информатика (ЕГЭ)</title>{% endblock %}
+
+    <!-- Добавление дополнительного статического CSS файла -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  </head>
+  <body>
+
+    <div id="header" class="header">
+      <div class="container">
+        <div class="d-flex justify-content-between">
+          <div class="col-lg-2 p-2">
+            <div class="logo">
+              <img src="{% static "images/logo.png" %}" alt="EGE-INF">
+              <p>EGE-INF</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 p-2">
+            <nav>
+              <ul class="menu d-flex justify-content-center">
+                <li class="menu__item"><a href="{% url 'catalog:index'%}">Главная</a></li>
+                <li class="menu__item"><a href="#">Задачи</a></li>
+                <li class="menu__item"><a href="#">Тесты</a></li>
+                <li class="menu__item"><a href="{% url 'catalog:lesson'%}">Курсы</a></li>
+                <li class="menu__item"><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-lg-2 p-2">
+            <div class="">
+            <a href="#"><p class="user">Елена Селеванова</p></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <section id="main" class="main">
+      <div class="container">
+
+        {% block content %}<!-- default content text (typically empty) --->{% endblock %}
+
+      </div>
+    </section>
+
+    <div id="footer" class="footer">
+      <div class="container">
+        <div class="row">
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+{% extends "catalog/base_generic.html" %}
+
+{% block title %}<title>Задачи по курсу</title>{% endblock %}
+
+{% block content %}
+
+    <div class="row justify-content-center">
+          <div class="lessonTheme col-lg-7">
+            <h3><b>Занятие 1.</b> Системы счисления. Перевод чисел в десятичную систему счисления.</h3>
+          </div>
+
+          <div class="w-100"></div>
+
+          {% for task in latest_task_list %}
+
+              <div class="number col-lg-1">
+                <b>{{ forloop.counter }}</b>
+              </div>
+              <div class="task col-lg-6">
+                <p>{{ task.task_text }}</p>
+                   <form>
+                     <div class="form-group row">
+                       <label for="formAnswerInput" class="col-sm-1 col-form-label">Ответ:</label>
+                       <div class="col-sm-5">
+                         <input type="text" class="form-control" id="formAnswerInput">
+                       </div>
+                     </div>
+                   </form>
+              </div>
+
+              <div class="w-100"></div>
+
+            {% empty %}
+                 <p>В данном уроке ещё нет заданий.</p>
+            {% endfor %}
+
+          <div class="mybutton">
+            <input id="buttonComplete" class="btn btn-primary" type="submit" value="Завершить" onclick="window.location='result_course1_lesson1.html'">
+          </div>
+
+    </div>
+
+{% endblock %}
